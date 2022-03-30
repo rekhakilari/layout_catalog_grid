@@ -20,3 +20,10 @@
     margin-right: 48px;
   }
 }
+$screen-sizes: "2" 488px, "3" 768px, "4" 1024px;
+
+@each $cards, $width in $screen-sizes {
+  @media (min-width: #{$width}) {
+    grid-template-columns: repeat(#{$cards}, 200px);
+  }
+}
